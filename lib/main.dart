@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'ui/pages/explore_page.dart';
+import 'ui/theme/ui_theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +11,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'TMDB Movies',
+      debugShowCheckedModeBanner: false,
+      theme: buildUiTheme(),
+      home: const ExplorePage(),
     );
   }
 }
